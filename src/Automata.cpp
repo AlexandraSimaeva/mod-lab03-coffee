@@ -75,7 +75,7 @@ int Automata::choice(int drink) {
     if (state == ACCEPT) {
         drink_num = drink;
         if (drink >= 0 && drink < menu.size()) {
-            std::cout << "\nYour drink is " << menu[drink] 
+            std::cout << "\nYour drink is " << menu[drink]
             << "\nStart cooking?" << std::endl;
             state = CHECK;
             return 1;

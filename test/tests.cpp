@@ -2,18 +2,28 @@
 
 #include <gtest/gtest.h>
 #include "Automata.h"
+#include <string>
+#include <vector>
 TEST(Case1, TestOFF) {
     std::string state = "OFF";
-    std::vector<std::string>  menu { "Hot chocolate", "Berry tea", "Ouloong tea", "lavender coffee", "Double Espresso", "Americano" };
+    std::vector<std::string>  menu { "Hot chocolate", 
+                                     "Berry tea",
+                                     "Ouloong tea",
+                                     "lavender coffee",
+                                     "Double Espresso",
+                                     "Americano" };
     std::vector<float>price { 3.0, 2.5, 3.0, 4.0, 4.5, 4.5 };
-
     Automata a1(menu, price);
-
     EXPECT_EQ(a1.getState(), state);
 }
 TEST(Case2, TestWAIT_1) {
     std::string state = "WAIT";
-    std::vector<std::string>  menu{ "Hot chocolate", "Berry tea", "Ouloong tea", "lavender coffee", "Double Espresso", "Americano" };
+    std::vector<std::string>  menu{ "Hot chocolate",
+                                    "Berry tea",
+                                    "Ouloong tea",
+                                    "lavender coffee",
+                                    "Double Espresso",
+                                    "Americano" };
     std::vector<float>price{ 3.0, 2.5, 3.0, 4.0, 4.5, 4.5 };
 
 
@@ -25,7 +35,12 @@ TEST(Case2, TestWAIT_1) {
 }
 TEST(Case2, TestWAIT_2) {
     std::string state = "WAIT";
-    std::vector<std::string>  menu{ "Hot chocolate", "Berry tea", "Ouloong tea", "lavender coffee", "Double Espresso", "Americano" };
+    std::vector<std::string>  menu{ "Hot chocolate",
+                                    "Berry tea",
+                                    "Ouloong tea",
+                                    "lavender coffee",
+                                    "Double Espresso",
+                                    "Americano" };
     std::vector<float>price{ 3.0, 2.5, 3.0, 4.0, 4.5, 4.5 };
 
     Automata a1(menu, price);
@@ -38,7 +53,12 @@ TEST(Case2, TestWAIT_2) {
 }
 TEST(Case2, TestWAIT_3) {
     std::string state = "WAIT";
-    std::vector<std::string>  menu{ "Hot chocolate", "Berry tea", "Ouloong tea", "lavender coffee", "Double Espresso", "Americano" };
+    std::vector<std::string>  menu{ "Hot chocolate",
+                                    "Berry tea",
+                                    "Ouloong tea",
+                                    "lavender coffee",
+                                    "Double Espresso",
+                                    "Americano" };
     std::vector<float>price{ 3.0, 2.5, 3.0, 4.0, 4.5, 4.5 };
 
     Automata a1(menu, price);
@@ -50,7 +70,12 @@ TEST(Case2, TestWAIT_3) {
 }
 TEST(Case2, TestWAIT_4) {
     std::string state = "WAIT";
-    std::vector<std::string>  menu{ "Hot chocolate", "Berry tea", "Ouloong tea", "lavender coffee", "Double Espresso", "Americano" };
+    std::vector<std::string>  menu{ "Hot chocolate",
+                                    "Berry tea",
+                                    "Ouloong tea",
+                                    "lavender coffee",
+                                    "Double Espresso",
+                                    "Americano" };
     std::vector<float>price{ 3.0, 2.5, 3.0, 4.0, 4.5, 4.5 };
 
     Automata a1(menu, price);
@@ -61,7 +86,12 @@ TEST(Case2, TestWAIT_4) {
 }
 TEST(Case3, TestACCEPT_1) {
     std::string state = "ACCEPT";
-    std::vector<std::string>  menu{ "Hot chocolate", "Berry tea", "Ouloong tea", "lavender coffee", "Double Espresso", "Americano" };
+    std::vector<std::string>  menu{ "Hot chocolate",
+                                    "Berry tea",
+                                    "Ouloong tea",
+                                    "lavender coffee",
+                                    "Double Espresso",
+                                    "Americano" };
     std::vector<float>price{ 3.0, 2.5, 3.0, 4.0, 4.5, 4.5 };
 
     Automata a1(menu, price);
@@ -73,7 +103,12 @@ TEST(Case3, TestACCEPT_1) {
 }
 TEST(Case3, TestACCEPT_2) {
     std::string state = "ACCEPT";
-    std::vector<std::string>  menu{ "Hot chocolate", "Berry tea", "Ouloong tea", "lavender coffee", "Double Espresso", "Americano" };
+    std::vector<std::string>  menu{ "Hot chocolate",
+                                    "Berry tea",
+                                    "Ouloong tea",
+                                    "lavender coffee",
+                                    "Double Espresso",
+                                    "Americano" };
     std::vector<float>price{ 3.0, 2.5, 3.0, 4.0, 4.5, 4.5 };
 
     Automata a1(menu, price);
@@ -86,7 +121,12 @@ TEST(Case3, TestACCEPT_2) {
 }
 TEST(Case3, TestACCEPT_3) {
     std::string state = "ACCEPT";
-    std::vector<std::string>  menu{ "Hot chocolate", "Berry tea", "Ouloong tea", "lavender coffee", "Double Espresso", "Americano" };
+    std::vector<std::string>  menu{ "Hot chocolate",
+                                    "Berry tea",
+                                    "Ouloong tea",
+                                    "lavender coffee",
+                                    "Double Espresso",
+                                    "Americano" };
     std::vector<float>price{ 3.0, 2.5, 3.0, 4.0, 4.5, 4.5 };
 
     Automata a1(menu, price);
@@ -98,7 +138,12 @@ TEST(Case3, TestACCEPT_3) {
 }
 TEST(Case4, TestCOOK_1) {
     std::string state = "COOK";
-    std::vector<std::string>  menu{ "Hot chocolate", "Berry tea", "Ouloong tea", "lavender coffee", "Double Espresso", "Americano" };
+    std::vector<std::string>  menu{ "Hot chocolate",
+                                    "Berry tea",
+                                    "Ouloong tea",
+                                    "lavender coffee",
+                                    "Double Espresso",
+                                    "Americano" };
     std::vector<float>price{ 3.0, 2.5, 3.0, 4.0, 4.5, 4.5 };
 
     Automata a1(menu, price);
@@ -112,7 +157,12 @@ TEST(Case4, TestCOOK_1) {
 }
 TEST(Case4, TestCOOK_2) {
     std::string state = "COOK";
-    std::vector<std::string>  menu{ "Hot chocolate", "Berry tea", "Ouloong tea", "lavender coffee", "Double Espresso", "Americano" };
+    std::vector<std::string>  menu{ "Hot chocolate",
+                                    "Berry tea",
+                                    "Ouloong tea",
+                                    "lavender coffee",
+                                    "Double Espresso",
+                                    "Americano" };
     std::vector<float>price{ 3.0, 2.5, 3.0, 4.0, 4.5, 4.5 };
 
     Automata a1(menu, price);
@@ -127,7 +177,12 @@ TEST(Case4, TestCOOK_2) {
 }
 TEST(Case5, TestCHECK_1) {
     std::string state = "CHECK";
-    std::vector<std::string>  menu{ "Hot chocolate", "Berry tea", "Ouloong tea", "lavender coffee", "Double Espresso", "Americano" };
+    std::vector<std::string>  menu{ "Hot chocolate",
+                                    "Berry tea",
+                                    "Ouloong tea",
+                                    "lavender coffee",
+                                    "Double Espresso",
+                                    "Americano" };
     std::vector<float>price{ 3.0, 2.5, 3.0, 4.0, 4.5, 4.5 };
 
     Automata a1(menu, price);
@@ -139,7 +194,12 @@ TEST(Case5, TestCHECK_1) {
 }
 TEST(Case5, TestCHECK_2) {
     std::string state = "CHECK";
-    std::vector<std::string>  menu{ "Hot chocolate", "Berry tea", "Ouloong tea", "lavender coffee", "Double Espresso", "Americano" };
+    std::vector<std::string>  menu{ "Hot chocolate",
+                                    "Berry tea",
+                                    "Ouloong tea",
+                                    "lavender coffee",
+                                    "Double Espresso",
+                                    "Americano" };
     std::vector<float>price{ 3.0, 2.5, 3.0, 4.0, 4.5, 4.5 };
 
     Automata a1(menu, price);

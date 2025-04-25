@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <string>û
+#include <string>
 class Automata
 {
 private:

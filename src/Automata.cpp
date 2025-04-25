@@ -1,13 +1,16 @@
 // Copyright 2025 AlexandraSimaeva
 #include "Automata.h"
+#include <iostream>
+#include <string>
+#include <vector>
 Automata::Automata(std::vector<std::string> menu1, std::vector<float> prices1) {
     cash = 0;
     state = OFF;
     for (int i = 0; i < menu1.size(); i++) {
-	menu.push_back(menu1[i]);
-	prices.push_back(prices1[i]);
-	}
-	drink_num = -1;
+        menu.push_back(menu1[i]);
+        prices.push_back(prices1[i]);
+    }
+    drink_num = -1;
 }
 std::string Automata::on() {
     if (state == OFF) {
@@ -69,23 +72,24 @@ std::string Automata::getState() {
 }
 int Automata::choice(int drink) {
     if (state == ACCEPT) {
-	drink_num = drink;
-	if (drink >= 0 && drink < menu.size()) {
-	    std::cout << "\nYour drink is " << menu[drink] << "\nStart cooking?" << std::endl;
-	    state = CHECK;
-	    return 1;
-	} else {
-	    std::cout << "\nWrong index of drink" << std::endl;
+        drink_num = drink;
+        if (drink >= 0 && drink < menu.size()) {
+            std::cout << "\nYour drink is " << menu[drink] 
+	    << "\nStart cooking?" << std::endl;
+            state = CHECK;
+            return 1;
+        } else {
+            std::cout << "\nWrong index of drink" << std::endl;
 	    return -1;
-	}
+        }
     } else {
-	std::cout << "\nOperation rejected, You can't now choose drink\n";
-	return -2;
+        std::cout << "\nOperation rejected, You can't now choose drink\n";
+        return -2;
     }
 }
 int Automata::check() {
     if (state == CHECK) {
-	if (cash < prices[drink_num]) {
+        if (cash < prices[drink_num]) {
 	    state = ACCEPT;
 	    std::cout << "\nNot enough money" << std::endl;
 	    return -1;
@@ -100,20 +104,20 @@ int Automata::check() {
 }
 void Automata::cook() {
     if (state == COOK) {
-	std::cout << "\nMaking " << menu[drink_num] << std::endl;
-	finish();
+        std::cout << "\nMaking " << menu[drink_num] << std::endl;
+        finish();
     } else {
-	std::cout << "\nOperation rejected" << std::endl;
+         std::cout << "\nOperation rejected" << std::endl;
     }
 }
 void Automata::cancel() {
     if (state == CHECK || state == ACCEPT) {
-	state = WAIT;
-	std::cout << "\nGet back money" << std::endl;
-	cash = 0;
-	drink_num = -1;
+        state = WAIT;
+        std::cout << "\nGet back money" << std::endl;
+        cash = 0;
+        drink_num = -1;
     } else {
-	std::cout << "\nOperation rejected" << std::endl;
+        std::cout << "\nOperation rejected" << std::endl;
     }
 }
 void Automata::finish() {

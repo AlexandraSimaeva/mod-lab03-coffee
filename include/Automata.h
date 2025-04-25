@@ -1,3 +1,4 @@
+// Copyright 2025 AlexandraSimaeva
 #include <iostream>
 #include <vector>
 #include <string>

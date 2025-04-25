@@ -33,7 +33,7 @@ void Automata::etMenu() {
     std::cout << "MENU\n";
     for (int i = 0; i < menu.size(); i++) {
         std::cout << menu[i] << " - " << prices[i] << "\n";
-    } 
+    }
     std::cout << std::endl;
 }
 void Automata::coin(float money) {

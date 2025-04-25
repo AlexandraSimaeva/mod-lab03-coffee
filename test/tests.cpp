@@ -6,7 +6,7 @@
 #include <vector>
 TEST(Case1, TestOFF) {
     std::string state = "OFF";
-    std::vector<std::string>  menu { "Hot chocolate", 
+    std::vector<std::string>  menu { "Hot chocolate",
                                      "Berry tea",
                                      "Ouloong tea",
                                      "lavender coffee",

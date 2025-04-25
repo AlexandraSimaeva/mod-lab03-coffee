@@ -25,7 +25,8 @@ std::string Automata::off() {
         state = OFF;
         return("Coffee machine is off\n");
     } else {
-        return("Operation rejected, machine can't be off during making drink\n");
+        return("Operation rejected,"
+        "machine can't be off during making drink\n");
     }
 }
 void Automata::etMenu() {

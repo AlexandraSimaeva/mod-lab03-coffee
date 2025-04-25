@@ -1,6 +1,5 @@
 // Copyright 2025 AlexandraSimaeva
-#ifndef INCLUDE_AUTOMATA_H_
-#define INCLUDE_AUTOMATA_H_
+#pragma once
 #include <iostream>
 #include <vector>
 #include <string>
